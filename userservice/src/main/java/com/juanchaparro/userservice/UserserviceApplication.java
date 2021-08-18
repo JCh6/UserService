@@ -38,7 +38,8 @@ public class UserserviceApplication {
 			userService.saveUser(new User("Arnold Suarez Perez", "arnold.suarez", "123"));
 
 			userService.addRoleToUser("juan.chaparro", "ROLE_USER");
-			userService.addRoleToUser("juan.chaparro", "ROLE_MANAGER");
+			userService.addRoleToUser("juan.chaparro", "ROLE_ADMIN");
+			userService.addRoleToUser("juan.chaparro", "ROLE_SUPER_ADMIN");
 			userService.addRoleToUser("jim.carry", "ROLE_ADMIN");
 		};
 	}
