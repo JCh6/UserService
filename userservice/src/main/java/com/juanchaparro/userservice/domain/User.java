@@ -3,6 +3,7 @@ package com.juanchaparro.userservice.domain;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.RequiredArgsConstructor;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -26,4 +27,10 @@ public class User {
     private String password;
     @ManyToMany(fetch = EAGER)
     private Collection<Role> roles = new ArrayList<>();
+
+    public User(String name, String username, String password) {
+        this.name = name;
+        this.username = username;
+        this.password = password;
+    }
 }
